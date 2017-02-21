@@ -1,0 +1,28 @@
+package com.t3.design.flyweight;
+
+import java.awt.*;
+
+/**
+ * Creation of DesignPatterInJava.
+ * <p/>
+ * Created by tttrinh
+ * Created date 2/15/17 2:20 PM
+ * <p/>
+ * $Revision:  $ $Date:  $
+ * $Log: ,v $
+ */
+public class Line implements Shape {
+  public Line() {
+    System.out.println("Creating line object");
+    try {
+      Thread.sleep(2000);
+    } catch (InterruptedException e) {
+      e.printStackTrace();
+    }
+  }
+
+  public void draw(Graphics line, int x1, int y1, int x2, int y2, Color color) {
+    line.setColor(color);
+    line.drawLine(x1, y1, x2, y2);
+  }
+}
